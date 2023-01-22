@@ -1,0 +1,122 @@
+.content-certi {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    overflow-y: scroll;
+}
+
+.content-cimg {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.content-cimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificates-panel {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    padding: 1rem;
+    background-color: rgba(57, 57, 57, 0.5);
+    transition: 1s;
+}
+
+.cicons-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 253);
+    border-radius: 10px;
+    padding: .3rem;
+}
+
+.cicon {
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: black;
+    transition: 1s;
+}
+
+.cicon:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.content-cimg:hover .certificates-panel {
+    bottom: 0;
+}
+
+.cheader-panel {
+    margin-bottom: 5px;
+}
+
+.cheader-panel span {
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+/* small device */
+@media screen and (max-width: 390px) {
+    .content-certi {
+        width: 100%;
+        height: 500px;
+        grid-template-columns: 1fr;
+    }
+
+    .content-cimg {
+        width: auto;
+        height: 230px;
+        margin-top: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        justify-self: center;
+    }
+}
+
+/* medium device */
+@media (min-width: 390px) and (max-width: 767px) {
+    .content-certi {
+        width: 100%;
+        height: 600px;
+        grid-template-columns: 1fr;
+    }
+
+    .content-cimg {
+        width: auto;
+        height: 230px;
+        margin-top: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        justify-self: center;
+    }
+}
+
+/* large device */
+@media screen and (min-width: 1024px) {
+    .content-certi::-webkit-scrollbar{
+        display: none;
+    }
+}

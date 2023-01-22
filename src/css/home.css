@@ -1,0 +1,119 @@
+.content-home {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.perfil {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.perfil img {
+    height: 100%;
+    width: 100%;
+}
+
+.perfil-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 155%;
+}
+
+.perfil-info h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.list-social{
+    justify-content: center;
+}
+
+.bxl-twitter {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-twitter:hover {
+    background-color: rgb(232, 228, 228);
+    color: rgb(3, 200, 200);
+}
+
+.bxl-instagram-alt{
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-instagram-alt:hover {
+    background-color: rgb(232, 228, 228);
+    color: rgb(194, 0, 191);
+}
+
+.bxl-youtube {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-youtube:hover{
+    background-color: rgb(232, 228, 228);
+    color: brown;
+}
+
+.bxl-github {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-github:hover {
+    background-color: rgb(232, 228, 228);
+    color: orange;
+}
+
+.bxl-behance {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-behance:hover {
+    background-color: rgb(232, 228, 228);
+    color: blue;
+}
+
+.perfil-info a {
+    text-decoration: none;
+    color: black;
+}
+
+/* RESPONSIVE */
+
+/* small device */
+@media screen and (max-width: 500px) {
+    .content-home{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  
+  /* medium device */
+  @media screen and (min-width: 767px) {
+    .content-home{
+        display: flex;
+        flex-direction: column;
+    }
+  }

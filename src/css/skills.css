@@ -1,0 +1,70 @@
+.content-skills {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content-simg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-skills {
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.list-skills li {
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.list-skills .line {
+    background: gray;
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.list-skills .line span {
+    float: left;
+    height: 20px;
+    background: linear-gradient(135deg, rgb(255, 153, 0), rgb(246, 255, 0));
+}
+
+/* RESPONSIVE */
+
+/* small device */
+@media screen and (max-width: 390px) {
+    .content-skills {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .list-skills {
+        height: 90%;
+    }
+}
+  
+  /* medium device */
+@media (min-width: 390px) and (max-width: 767px) {
+    .content-skills {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* large device */
+@media screen and (min-width: 1024px) {
+    .list-skills::-webkit-scrollbar{
+        display: none;
+    }
+}
