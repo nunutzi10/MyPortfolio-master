@@ -35,40 +35,16 @@
     justify-content: center;
 }
 
-.bxl-twitter {
+.bxl-linkedin {
     padding: 7px;
     border-radius: 27%;
     transition: .5s;
     cursor: pointer;
 }
 
-.bxl-twitter:hover {
+.bxl-linkedin:hover {
     background-color: rgb(232, 228, 228);
     color: rgb(3, 200, 200);
-}
-
-.bxl-instagram-alt{
-    padding: 7px;
-    border-radius: 27%;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.bxl-instagram-alt:hover {
-    background-color: rgb(232, 228, 228);
-    color: rgb(194, 0, 191);
-}
-
-.bxl-youtube {
-    padding: 7px;
-    border-radius: 27%;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.bxl-youtube:hover{
-    background-color: rgb(232, 228, 228);
-    color: brown;
 }
 
 .bxl-github {
@@ -98,6 +74,21 @@
 .perfil-info a {
     text-decoration: none;
     color: black;
+}
+
+.btn-download-cv {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #fce301;
+    color: black !important;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-download-cv:hover {
+    background-color: #cab600;
 }
 
 /* RESPONSIVE */
