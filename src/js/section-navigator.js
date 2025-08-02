@@ -36,6 +36,9 @@ class SectionNavigator {
             });
         });
         
+        // Navigation menu links integration
+        this.bindMenuNavigation();
+        
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowDown' || e.key === ' ') {
@@ -62,6 +65,52 @@ class SectionNavigator {
             }, 150);
         }, { passive: false });
         */
+    }
+    
+    bindMenuNavigation() {
+        // Integrar navegación del menú lateral
+        const navLinks = document.querySelectorAll('.nav__link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Obtener el href del enlace (ej: #home, #portfolio, etc.)
+                const href = link.getAttribute('href');
+                const sectionId = href.replace('#', '');
+                
+                // Encontrar el índice de la sección
+                const sectionIndex = this.sections.indexOf(sectionId);
+                
+                if (sectionIndex !== -1) {
+                    // Ir a la sección
+                    this.goToSection(sectionIndex);
+                    
+                    // Cerrar el menú
+                    const main = document.getElementById('main');
+                    main.classList.remove('show-menu');
+                    
+                    // Actualizar el estado activo del menú
+                    this.updateMenuActiveState(sectionId);
+                }
+            });
+        });
+    }
+    
+    updateMenuActiveState(activeSectionId) {
+        // Actualizar el estado activo en el menú lateral
+        const navLinks = document.querySelectorAll('.nav__link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            const sectionId = href.replace('#', '');
+            
+            if (sectionId === activeSectionId) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
+        });
     }
     
     disableScroll() {
@@ -93,6 +142,7 @@ class SectionNavigator {
         
         this.updateIndicator();
         this.updateDots();
+        this.updateMenuActiveState(this.sections[0]);
     }
     
     nextSection() {
@@ -144,6 +194,7 @@ class SectionNavigator {
             this.updateIndicator();
             this.updateDots();
             this.updateNavigatorIcon();
+            this.updateMenuActiveState(this.sections[index]);
             
             setTimeout(() => {
                 this.isTransitioning = false;

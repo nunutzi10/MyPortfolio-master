@@ -29,6 +29,8 @@ if(navClose){
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
+/*
+// Esta funcionalidad ahora está integrada en el section-navigator
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -37,6 +39,7 @@ function linkAction(){
     main.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+*/
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 /*
