@@ -1,9 +1,11 @@
 import './styles.css';
 import { initSkills } from './js/skills';
 import { initCertificates } from './js/certificates';
+import { initSectionNavigator } from './js/section-navigator';
 
 initSkills();
 initCertificates();
+initSectionNavigator();
 
 /*=============== SHOW MENU ===============*/
 const headerToggle = document.getElementById('header-toggle'),
@@ -37,14 +39,17 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+/*
 function scrollHeader(){
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
     if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/*
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -63,3 +68,4 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
+*/
